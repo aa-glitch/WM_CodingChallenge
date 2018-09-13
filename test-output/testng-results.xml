@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4816" started-at="2018-09-13T07:37:41Z" finished-at="2018-09-13T07:37:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4816" started-at="2018-09-13T07:37:41Z" finished-at="2018-09-13T07:37:46Z">
+      <class name="workM.workTest.day1">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="2599" started-at="2018-09-13T03:37:42Z" data-provider="getData" finished-at="2018-09-13T03:37:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Johnathan  '5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Gerhold  '8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[destin.gorczany]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1JQO2kL]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jamar.davis@yahoo.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[967-789-2313]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#1: Valid/Positive Test Case; Expect - Success:True]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="130" started-at="2018-09-13T03:37:44Z" data-provider="getData" finished-at="2018-09-13T03:37:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[$%nr9tie*iIc1U^6G]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Funk  '8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[kelli.lynch]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#aR5K9E&foSmW@9l]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[liliana.ankunding@yahoo.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[277-046-0045]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#2: Expected- Success:False && Errors: First Name contains Invalid Characters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="139" started-at="2018-09-13T03:37:44Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Linnie]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4r91NFZfsbPfq62s]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[adrianna.schimmel]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[qUIyV!0gJ3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[delores.wiza@hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[340-732-8414]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#3: Expected- Success:False && Errors: Last Name contains Invalid Characters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="124" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Forward Applications ManagerLora]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[JonesI]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[z0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Z6RNP#C9E50f]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[aurelie.dickens@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[892-040-5124]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#4: Expected- Success:False && Errors: Username must be at least 2 characters in length]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="143" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Julia Wisoky IMD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kiehn]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rosalinda.pouros]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[nikko.sauer@hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[184-490-2706]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#5: Expected- Success:False && Errors: Password is not greater than 6 chars]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="128" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Elna']]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Armstrong']]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[karl.abernathy]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[K^82#i&Z&60imQ3Cu$%v*Q]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[therese.sanford@yahoo.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[567-732-1563]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#6: Expected- Success:False && Errors: Password is greater than 20 chars]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="136" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Josue]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[O'Connell]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[louie.schamberger]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[g3ddwvb6j!9uy4g7k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[cyril.hahn@yahoo.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[300-732-2537]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#7: Expected- Success:False && Errors: Password doesn't contain any upper case letter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="143" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kaley]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lueilwitz]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[lenna.bernier]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[JTN6N^T$]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ashtyn.labadie@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[502-819-1713]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#8: Expected- Success:False && Errors: Password doesn't contain any lower case letter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="126" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Juliet]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kuhn]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[danial.olson]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[pRXRYRH&hsRKmRKR]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[kariane.gaylord@hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[958-017-0301]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#9: Expected- Success:False && Errors: Password doesn't contain any numbers]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="141" started-at="2018-09-13T03:37:45Z" data-provider="getData" finished-at="2018-09-13T03:37:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jermain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Considine]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[nellie.kihn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[8El90qeXk31vZ9OR]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jack.abbott@hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[704-303-4418]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#10: Expected- Success:False && Errors: Password doesn't contain any special characters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="128" started-at="2018-09-13T03:37:46Z" data-provider="getData" finished-at="2018-09-13T03:37:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mona]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[O'Kon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[estell.kovacek]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[htHlc61A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[florencio.conroy#yahoo.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[949-757-0914]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#11: Expected- Success:False && Errors: A valid email must be provided]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="124" started-at="2018-09-13T03:37:46Z" data-provider="getData" finished-at="2018-09-13T03:37:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dillon]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Franecki]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[katharina.beatty]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lap0cY8wkVF74mo]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[julianne.hegmann@hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1-366-686-9122]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#12: Expected- Success:False && Errors: A valid phone must be provided]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:workM.workTest.day1@d2cc05a]" name="login" duration-ms="119" started-at="2018-09-13T03:37:46Z" data-provider="getData" finished-at="2018-09-13T03:37:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[U^BCS7drzM^dH*^5Zzo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[H%lZ4v^Hc*h3b15v]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[o3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[7dzpawz75k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[seth.schinner#hotmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[(470)-538-6629]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TC#13: Expected- Success:False && Errors: All errors to be displayed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- workM.workTest.day1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
