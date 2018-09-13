@@ -1,33 +1,36 @@
 package workM.workTest;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
-import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-import com.github.javafaker.Faker;
+public class LoginAPI {
 
-import workM.workTest.ReusableMethods;
-
-public class day1 {
-
+	public Properties prop;
+	
 	@Test(dataProvider = "getData")
 	public void login(String firstName, String lastName, String username, String password, String email,
-			String phoneNumber, String TCNumber) {
+			String phoneNumber, String TCNumber) throws IOException {
 
-		RestAssured.baseURI = "http://interview.onforce.com/qe/";
+		 prop= new Properties();
+		 FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "//src//main//java//resources//data.properties");
+		 prop.load(fis);
+		
+		RestAssured.baseURI = prop.getProperty("url");
 		System.out.print("\n\n");
 		System.out.print("===========TEST============");
 		System.out.print("\n\n");
@@ -39,24 +42,15 @@ public class day1 {
 				+ "";
 		System.out.println(body);
 
-		/*
-		 * given().header("Content-Type", "application/json").
-		 * body(body).when().post().then().assertThat().statusCode(201).
-		 * and().contentType(ContentType.JSON).and().body("success",equalTo(true));
-		 */
 		Response res = given().header("Content-Type", "application/json").body(body).when().post().then().extract()
 				.response();
 		JsonPath js = ReusableMethods.rawToJson(res);
-		Boolean success = js.get("success");
+		String success = js.getString("success");
 		System.out.println(TCNumber);
-		System.out.println("Received: Success:" + success);
-		Boolean successtrue = TCNumber.contains("true");
-		Boolean successfalse = TCNumber.contains("false");
+
+		System.out.println("      Received: Success:" + success);
 		
-//		softAssertion.assertTrue(false);
-		
-//		softAssertion.assertTrue(successfalse=false, "Passed");
-		if (success.equals(false)) {
+		if (success.equals("false")) {
 			List<String> err = js.get("errors");
 			Iterator<String> it = err.iterator();
 			while (it.hasNext()) {
@@ -64,6 +58,17 @@ public class day1 {
 				System.out.println("Errors: " + strerr);
 			}
 		}
+
+		if (TCNumber.contains("true")) {
+			Assert.assertEquals(success, "true", "FAILED:   " + TCNumber);
+			System.out.println("      PASSSED:   " + TCNumber.substring(0, 5));
+		}
+		if (TCNumber.contains("false")) {
+			Assert.assertEquals(success, "false", "FAILED:   " + TCNumber);
+			System.out.println("      PASSSED:   " + TCNumber.substring(0, 5));
+		}
+
+		
 
 		System.out.print("\n\n\n");
 	}
@@ -83,30 +88,31 @@ public class day1 {
 		data[0][2] = faker.name().username();
 		// generates password with minimum 7, maximum 19, atleast 1 number, includes
 		// special chars and upper case.
-		data[0][3] = faker.internet().password(7, 19, true, true);
+		// data[0][3] = faker.internet().password(7, 19, true, true);
+		data[0][3] = "^%G$a1*";
 		// gets a email address - which always has a @
 		data[0][4] = faker.internet().emailAddress();
 		// gets the random numbers in the below format.
 		data[0][5] = faker.numerify("###-###-####");
-		data[0][6] = "TC#1: Valid/Positive Test Case; Expect - Success:True";
+		data[0][6] = "TC#1: Expected: Success:true && This is valid/positive test scenario";
 
 		// TC#2 // "First name contains invalid characters."
-		data[1][0] = faker.internet().password(10, 20, true, true);
+		data[1][0] = faker.internet().password(15, 30, true, true);
 		data[1][1] = faker.name().lastName() + "  " + "'" + faker.numerify("#");
 		data[1][2] = faker.name().username();
 		data[1][3] = faker.internet().password(7, 19, true, true);
 		data[1][4] = faker.internet().emailAddress();
 		data[1][5] = faker.numerify("###-###-####");
-		data[1][6] = "TC#2: Expected- Success:False && Errors: First Name contains Invalid Characters";
+		data[1][6] = "TC#2: Expected: Success:false && Errors: First Name contains Invalid Characters";
 
 		// TC#3 // "Last name contains invalid characters."
 		data[2][0] = faker.name().firstName();
-		data[2][1] = faker.internet().password(1, 20, true, true);
+		data[2][1] = faker.internet().password(15, 30, true, true);
 		data[2][2] = faker.name().username();
 		data[2][3] = faker.internet().password(7, 19, true, true);
 		data[2][4] = faker.internet().emailAddress();
 		data[2][5] = faker.numerify("###-###-####");
-		data[2][6] = "TC#3: Expected- Success:False && Errors: Last Name contains Invalid Characters";
+		data[2][6] = "TC#3: Expected- Success:false && Errors: Last Name contains Invalid Characters";
 
 		// TC#4 // "Username must be at least 2 characters in length."
 		data[3][0] = faker.name().title() + faker.name().firstName();
@@ -115,7 +121,7 @@ public class day1 {
 		data[3][3] = faker.internet().password(7, 19, true, true);
 		data[3][4] = faker.internet().emailAddress();
 		data[3][5] = faker.numerify("###-###-####");
-		data[3][6] = "TC#4: Expected- Success:False && Errors: Username must be at least 2 characters in length";
+		data[3][6] = "TC#4: Expected- Success:false && Errors: Username must be at least 2 characters in length";
 
 		// TC#5 //"Password does not meet all requirements."// its not greater than
 		// 6characters
@@ -125,17 +131,17 @@ public class day1 {
 		data[4][3] = faker.internet().password(1, 6, true, true);
 		data[4][4] = faker.internet().emailAddress();
 		data[4][5] = faker.numerify("###-###-####");
-		data[4][6] = "TC#5: Expected- Success:False && Errors: Password is not greater than 6 chars";
+		data[4][6] = "TC#5: Expected- Success:false && Errors: Password is not greater than 6 chars";
 
 		// TC#6 //"Password does not meet all requirements.", //its greater than
 		// 20characters
 		data[5][0] = faker.name().firstName() + "'";
 		data[5][1] = faker.name().lastName() + "'";
 		data[5][2] = faker.name().username();
-		data[5][3] = faker.internet().password(20, 24, true, true);
+		data[5][3] = faker.internet().password(21, 30, true, true);
 		data[5][4] = faker.internet().emailAddress();
 		data[5][5] = faker.numerify("###-###-####");
-		data[5][6] = "TC#6: Expected- Success:False && Errors: Password is greater than 20 chars";
+		data[5][6] = "TC#6: Expected- Success:false && Errors: Password is greater than 20 chars";
 
 		// TC#7 //"Password does not meet all requirements.", //it doesn't contain any
 		// Upper case Letter
@@ -145,7 +151,7 @@ public class day1 {
 		data[6][3] = faker.internet().password(7, 19, false, true);
 		data[6][4] = faker.internet().emailAddress();
 		data[6][5] = faker.numerify("###-###-####");
-		data[6][6] = "TC#7: Expected- Success:False && Errors: Password doesn't contain any upper case letter";
+		data[6][6] = "TC#7: Expected- Success:false && Errors: Password doesn't contain any upper case letter";
 
 		// TC#8 //"Password does not meet all requirements.", // it doesn't contain any
 		// lower case letter
@@ -155,7 +161,7 @@ public class day1 {
 		data[7][3] = faker.internet().password(7, 19, false, true).toUpperCase();
 		data[7][4] = faker.internet().emailAddress();
 		data[7][5] = faker.numerify("###-###-####");
-		data[7][6] = "TC#8: Expected- Success:False && Errors: Password doesn't contain any lower case letter";
+		data[7][6] = "TC#8: Expected- Success:false && Errors: Password doesn't contain any lower case letter";
 
 		// TC#8 //"Password does not meet all requirements.", //it doesn't contain any
 		// number// replaced all numbers with R
@@ -166,7 +172,7 @@ public class day1 {
 		data[8][3] = faker.internet().password(7, 19, true, true).replaceAll("[*0-9]", "R");
 		data[8][4] = faker.internet().emailAddress();
 		data[8][5] = faker.numerify("###-###-####");
-		data[8][6] = "TC#9: Expected- Success:False && Errors: Password doesn't contain any numbers";
+		data[8][6] = "TC#9: Expected- Success:false && Errors: Password doesn't contain any numbers";
 
 		// TC#9 //"Password does not meet all requirements.", //it doesn't contain any
 		// special character
@@ -176,7 +182,7 @@ public class day1 {
 		data[9][3] = faker.internet().password(7, 19, true, false);
 		data[9][4] = faker.internet().emailAddress();
 		data[9][5] = faker.numerify("###-###-####");
-		data[9][6] = "TC#10: Expected- Success:False && Errors: Password doesn't contain any special characters";
+		data[9][6] = "TC#10: Expected- Success:false && Errors: Password doesn't contain any special characters";
 
 		// TC#10 //"A valid email must be provided." //it doesn't contain @
 		data[10][0] = faker.name().firstName();
@@ -185,7 +191,7 @@ public class day1 {
 		data[10][3] = faker.internet().password(7, 19, true, false);
 		data[10][4] = faker.internet().emailAddress().replace("@", "#");
 		data[10][5] = faker.numerify("###-###-####");
-		data[10][6] = "TC#11: Expected- Success:False && Errors: A valid email must be provided";
+		data[10][6] = "TC#11: Expected- Success:false && Errors: A valid email must be provided";
 
 		// TC#11 //"A valid phone must be provided."
 		data[11][0] = faker.name().firstName();
@@ -194,17 +200,16 @@ public class day1 {
 		data[11][3] = faker.internet().password(7, 19, true, false);
 		data[11][4] = faker.internet().emailAddress();
 		data[11][5] = faker.numerify("1-###-###-####");
-		data[11][6] = "TC#12: Expected- Success:False && Errors: A valid phone must be provided";
+		data[11][6] = "TC#12: Expected- Success:false && Errors: A valid phone must be provided";
 
 		// TC#12 //"All Invalid
 		data[12][0] = faker.internet().password(10, 20, true, true);
 		data[12][1] = faker.internet().password(10, 20, true, true);
-		data[12][2] = faker.bothify("?#");
+		data[12][2] = faker.bothify("?");
 		data[12][3] = faker.internet().password(7, 25, false, false);
 		data[12][4] = faker.internet().emailAddress().replace("@", "#");
 		data[12][5] = faker.numerify("(###)-###-####");
-		data[12][6] = "TC#13: Expected- Success:False && Errors: All errors to be displayed";
-
+		data[12][6] = "TC#13: Expected- Success:false && Errors: All errors to be displayed";
 
 		return data;
 
